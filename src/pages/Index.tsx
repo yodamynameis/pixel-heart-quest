@@ -1,24 +1,35 @@
 import ValentineCard from "@/components/ValentineCard";
 import FloatingHearts from "@/components/FloatingHearts";
 import PixelCat from "@/components/PixelCat";
+import pixelPattern from "@/assets/pixel-pattern.png";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-valentine flex items-center justify-center relative overflow-hidden px-4 py-8">
+    <div 
+      className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-8"
+      style={{
+        backgroundImage: `url(${pixelPattern})`,
+        backgroundSize: '300px 300px',
+        backgroundRepeat: 'repeat',
+      }}
+    >
+      {/* Soft gradient overlay for depth */}
+      <div className="absolute inset-0 bg-gradient-valentine opacity-40 pointer-events-none" />
+      
       {/* Floating hearts background */}
       <FloatingHearts />
       
       {/* Decorative corner cats */}
-      <div className="fixed top-4 left-4 opacity-60 hidden sm:block">
+      <div className="fixed top-4 left-4 opacity-70 hidden sm:block">
         <PixelCat mood="shy" size="sm" />
       </div>
-      <div className="fixed top-4 right-4 opacity-60 hidden sm:block">
+      <div className="fixed top-4 right-4 opacity-70 hidden sm:block">
         <PixelCat mood="blushing" size="sm" />
       </div>
-      <div className="fixed bottom-4 left-4 opacity-60 hidden sm:block">
+      <div className="fixed bottom-4 left-4 opacity-70 hidden sm:block">
         <PixelCat mood="excited" size="sm" />
       </div>
-      <div className="fixed bottom-4 right-4 opacity-60 hidden sm:block">
+      <div className="fixed bottom-4 right-4 opacity-70 hidden sm:block">
         <PixelCat mood="shy" size="sm" />
       </div>
       
