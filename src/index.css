@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 /* Valentine Pixel Love Theme - Soft pink & baby blue with retro charm */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Press Start 2P', monospace;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 

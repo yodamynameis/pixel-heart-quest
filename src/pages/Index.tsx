@@ -48,3 +48,12 @@ const Index = () => {
 };
 
 export default Index;
+
+<div className="
+  bg-[#fffdf7]
+  border-[6px]
+  border-[#333]
+  p-8
+  w-[380px]
+  text-center
+"></div>

@@ -5,12 +5,13 @@ import PixelConfetti from "./PixelConfetti";
 import { playYesSound, playNoEscapeSound, playCatSound } from "@/utils/sounds";
 
 const noButtonMessages = [
+  "Chutiya ho kya? 😾",
+  "Are you Gay?🏳️‍🌈",
+  "KYA HAII?!😡",
   "Hey! That's illegal 😾",
-  "Wrong answer hooman",
   "Try again sweetie 💕",
   "Nope, not allowed!",
   "Are you sure? 🥺",
-  "Think again!",
 ];
 
 const ValentineCard = () => {
@@ -92,7 +93,7 @@ const ValentineCard = () => {
             transition={{ delay: 1.5 }}
             className="mt-8 font-pixel text-lg text-heart"
           >
-            Happy Valentine's Day!
+            I LOVE YOU !
           </motion.div>
         </motion.div>
       </motion.div>
@@ -124,21 +125,44 @@ const ValentineCard = () => {
           💖
         </motion.div>
         
-        <h1 className="font-pixel text-base md:text-lg text-primary mb-4 leading-relaxed">
-          Will you be my Valentine?
+        <h1 className="
+  text-[25px]
+  leading-[1.3]
+  text-pink-500
+  mb-4
+">
+          Will you be my<br /> Valentine?
         </h1>
-        
-        <p className="font-pixel text-xs text-muted-foreground mb-8 leading-loose">
-          I promise unlimited hugs, memes, and love 🐾
-        </p>
+        <div className="flex justify-center mb-4 text-2xl">
+  <span className="text-pink-400">💙</span>
+  <span className="text-blue-400">🩷</span>
+  <span className="text-pink-400">💙</span>
+</div>
+       <p className="
+  text-[14px]
+  text-blue-500
+  mb-6
+">
+  I promise you unlimited hugs, memes, love and cuddles :)
+</p>
         
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center min-h-[100px] relative">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center min-h-[100px] relative">
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={handleYesClick}
-            className="font-pixel text-sm bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-lg border-2 border-pixel shadow-pixel transition-colors"
+            className="border-[4px]
+    border-pink-500
+    bg-pink-400
+    text-white
+    px-6
+    py-3
+    text-[12px]
+    hover:translate-y-[2px]
+    active:translate-y-[4px]
+    transition
+  "
           >
             YES 💕
           </motion.button>
@@ -154,7 +178,17 @@ const ValentineCard = () => {
             onMouseEnter={moveNoButton}
             onTouchStart={moveNoButton}
             onClick={moveNoButton}
-            className="font-pixel text-sm bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-3 rounded-lg border-2 border-pixel shadow-pixel transition-colors"
+            className="border-[4px]
+    border-blue-400
+    bg-blue-300
+    text-white
+    px-6
+    py-3
+    text-[12px]
+    hover:translate-y-[2px]
+    active:translate-y-[4px]
+    transition
+  "
           >
             NO 🙃
           </motion.button>

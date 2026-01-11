@@ -13,7 +13,7 @@ const PixelConfetti = () => {
   const [pieces, setPieces] = useState<ConfettiPiece[]>([]);
 
   useEffect(() => {
-    const emojis = ["💖", "💕", "✨", "🌸", "💗", "⭐", "🎀", "💝"];
+    const emojis = ["💖", "💋","💕", "✨", "🌸", "💗", "⭐", "🎀", "💝"];
     const newPieces = Array.from({ length: 50 }, (_, i) => ({
       id: i,
       x: Math.random() * 100,
