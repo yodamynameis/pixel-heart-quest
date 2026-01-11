@@ -106,11 +106,16 @@
 @layer base {
   * {
     @apply border-border;
+    font-family: 'Press Start 2P', monospace, cursive !important;
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
-    font-family: 'Press Start 2P', cursive;
+    @apply bg-background text-foreground;
+    font-family: 'Press Start 2P', monospace, cursive !important;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: unset;
+    font-smooth: never;
+    text-rendering: optimizeSpeed;
   }
 }
 
