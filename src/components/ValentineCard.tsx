@@ -2,6 +2,7 @@ import { useState, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import PixelCat from "./PixelCat";
 import PixelConfetti from "./PixelConfetti";
+import { playYesSound, playNoEscapeSound, playCatSound } from "@/utils/sounds";
 
 const noButtonMessages = [
   "Hey! That's illegal 😾",
@@ -19,6 +20,11 @@ const ValentineCard = () => {
   const [noHoverCount, setNoHoverCount] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  const handleYesClick = () => {
+    playYesSound();
+    setAccepted(true);
+  };
+
   const moveNoButton = useCallback(() => {
     if (!containerRef.current) return;
     
@@ -32,6 +38,10 @@ const ValentineCard = () => {
     setNoPosition({ x: newX, y: newY });
     setNoHoverCount((prev) => prev + 1);
     setCatMessage(noButtonMessages[Math.floor(Math.random() * noButtonMessages.length)]);
+    
+    // Play sounds
+    playNoEscapeSound();
+    setTimeout(() => playCatSound(), 150);
     
     setTimeout(() => setCatMessage(null), 2000);
   }, []);
@@ -48,7 +58,7 @@ const ValentineCard = () => {
           initial={{ scale: 0.8, y: 20 }}
           animate={{ scale: 1, y: 0 }}
           transition={{ type: "spring", damping: 15 }}
-          className="bg-card/90 backdrop-blur-sm border-4 border-pixel rounded-2xl p-8 md:p-12 shadow-pixel-lg max-w-lg mx-auto"
+          className="bg-card/95 backdrop-blur-sm border-4 border-pixel rounded-2xl p-8 md:p-12 shadow-pixel-lg max-w-lg mx-auto"
         >
           <motion.h1
             className="font-pixel text-xl md:text-2xl text-primary mb-6 leading-relaxed"
@@ -94,7 +104,7 @@ const ValentineCard = () => {
       ref={containerRef}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-card/90 backdrop-blur-sm border-4 border-pixel rounded-2xl p-6 md:p-10 shadow-pixel-lg max-w-md mx-4 relative"
+      className="bg-card/95 backdrop-blur-sm border-4 border-pixel rounded-2xl p-6 md:p-10 shadow-pixel-lg max-w-md mx-4 relative"
     >
       {/* Corner cats */}
       <div className="absolute -top-6 -left-4">
@@ -127,7 +137,7 @@ const ValentineCard = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => setAccepted(true)}
+            onClick={handleYesClick}
             className="font-pixel text-sm bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-lg border-2 border-pixel shadow-pixel transition-colors"
           >
             YES 💕
