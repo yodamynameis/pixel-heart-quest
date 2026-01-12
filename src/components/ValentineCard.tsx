@@ -85,7 +85,7 @@ const ValentineCard = () => {
             transition={{ delay: 1 }}
             className="font-pixel text-xs text-pink-500 text-muted-foreground leading-loose"
           >
-            Life is better with you in it & being with you just feels natural{" "}
+            Life is so much better with you in it. I want you forever{" "}
    <span className="text-xl">🫶🏼✨</span>
 
           </motion.p>
