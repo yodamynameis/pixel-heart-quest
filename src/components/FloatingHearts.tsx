@@ -32,7 +32,7 @@ const FloatingHearts = () => {
             ease: "linear",
           }}
         >
-          💕
+          💕 🌷 💖 🌼
         </motion.div>
       ))}
     </div>

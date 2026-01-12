@@ -8,10 +8,10 @@ const noButtonMessages = [
   "Chutiya ho kya? 😾",
   "Are you Gay?🏳️‍🌈",
   "KYA HAII?!😡",
-  "Hey! That's illegal 😾",
-  "Try again sweetie 💕",
-  "Nope, not allowed!",
-  "Are you sure? 🥺",
+  "Try again cutie 💕",
+  "koi aur hai kya...?😔",
+  "Pyaar nhi krti to seedhe bol do na🥺",
+  "Aadyaaa... please! 🙏🏼",
 ];
 
 const ValentineCard = () => {
@@ -62,13 +62,14 @@ const ValentineCard = () => {
           className="bg-card/95 backdrop-blur-sm border-4 border-pixel rounded-2xl p-8 md:p-12 shadow-pixel-lg max-w-lg mx-auto"
         >
           <motion.h1
-            className="font-pixel text-xl md:text-2xl text-primary mb-6 leading-relaxed"
+            className="font-pixel text-xl md:text-2xl text-primary mb-6 leading-relaxed text-pink-600"
             animate={{ scale: [1, 1.02, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            YAY!! 💘
+            YAAAAYYY!!💘
           </motion.h1>
-          <p className="font-pixel text-xs md:text-sm text-foreground mb-8 leading-loose">
+         <p className="font-pixel text-xs md:text-sm text-blue-600 mb-8 leading-loose">
+
             You just made me the happiest person!
           </p>
           
@@ -84,16 +85,16 @@ const ValentineCard = () => {
             transition={{ delay: 1 }}
             className="font-pixel text-xs text-muted-foreground leading-loose"
           >
-            I love you more than all the cats on the internet 💗🐱
+            Life is better with you in it & being with you feels natural 🫶🏼✨
           </motion.p>
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5 }}
-            className="mt-8 font-pixel text-lg text-heart"
+            className="mt-8 font-pixel text-2xl text-heart"
           >
-            I LOVE YOU !
+            I LOVE YOU ! 💗
           </motion.div>
         </motion.div>
       </motion.div>
@@ -117,21 +118,22 @@ const ValentineCard = () => {
       
       {/* Main content */}
       <div className="text-center pt-4">
-        <motion.div
-          className="text-4xl mb-4"
-          animate={{ scale: [1, 1.1, 1] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        >
-          💖
-        </motion.div>
+        
+        <motion.img
+  src="./public/favicon.ico"
+  alt="pixel heart"
+  className="w-14 h-14 mx-auto mb-4"
+  animate={{ scale: [1, 1.15, 1] }}
+  transition={{ duration: 1.5, repeat: Infinity }}
+/>
         
         <h1 className="
-  text-[25px]
+  text-[22px]
   leading-[1.3]
   text-pink-500
   mb-4
 ">
-          Will you be my<br /> Valentine?
+           Aadya will you be my<br /> Valentine?
         </h1>
         <div className="flex justify-center mb-4 text-2xl">
   <span className="text-pink-400">💙</span>
@@ -164,7 +166,7 @@ const ValentineCard = () => {
     transition
   "
           >
-            YES 💕
+            YES 💖
           </motion.button>
           
           <motion.button

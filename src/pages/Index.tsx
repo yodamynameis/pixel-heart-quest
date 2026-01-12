@@ -5,21 +5,27 @@ import pixelPattern from "@/assets/pixel-pattern.png";
 
 const Index = () => {
   return (
-    <div 
-      className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-8"
+    <div
+      className="
+        relative
+        w-screen h-screen
+        overflow-hidden
+        flex items-center justify-center
+        px-4
+      "
       style={{
         backgroundImage: `url(${pixelPattern})`,
-        backgroundSize: '300px 300px',
-        backgroundRepeat: 'repeat',
+        backgroundSize: "300px 300px",
+        backgroundRepeat: "repeat",
       }}
     >
-      {/* Soft gradient overlay for depth */}
+      {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-valentine opacity-40 pointer-events-none" />
-      
-      {/* Floating hearts background */}
+
+      {/* Background effects */}
       <FloatingHearts />
-      
-      {/* Decorative corner cats */}
+
+      {/* Corner cats */}
       <div className="fixed top-4 left-4 opacity-70 hidden sm:block">
         <PixelCat mood="shy" size="sm" />
       </div>
@@ -32,28 +38,34 @@ const Index = () => {
       <div className="fixed bottom-4 right-4 opacity-70 hidden sm:block">
         <PixelCat mood="shy" size="sm" />
       </div>
-      
-      {/* Floating sparkles */}
+
+      {/* Sparkles */}
       <div className="fixed top-20 left-1/4 text-2xl animate-sparkle opacity-70">✨</div>
-      <div className="fixed top-32 right-1/3 text-xl animate-sparkle opacity-60" style={{ animationDelay: '0.5s' }}>💫</div>
-      <div className="fixed bottom-32 left-1/3 text-lg animate-sparkle opacity-50" style={{ animationDelay: '1s' }}>⭐</div>
-      <div className="fixed bottom-20 right-1/4 text-2xl animate-sparkle opacity-60" style={{ animationDelay: '1.5s' }}>✨</div>
-      
-      {/* Main content */}
+      <div className="fixed bottom-24 right-1/4 text-xl animate-sparkle opacity-60">💫</div>
+
+      {/* CARD (center of page) */}
       <main className="relative z-10">
         <ValentineCard />
       </main>
+
+      {/* ✅ PAGE FOOTER (not card footer) */}
+      <footer
+        className="
+          absolute
+          bottom-6
+          left-1/2
+          -translate-x-1/2
+          font-['Press_Start_2P']
+          text-xs
+          text-blue-600
+          z-10
+          opacity-90
+        "
+      >
+        ~ always yours <span className="text-pink-500">gajodhar💕</span>
+      </footer>
     </div>
   );
 };
 
 export default Index;
-
-<div className="
-  bg-[#fffdf7]
-  border-[6px]
-  border-[#333]
-  p-8
-  w-[380px]
-  text-center
-"></div>
