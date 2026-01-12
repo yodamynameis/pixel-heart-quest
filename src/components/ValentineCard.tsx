@@ -118,14 +118,14 @@ const ValentineCard = () => {
       
       {/* Main content */}
       <div className="text-center pt-4">
-  <motion.img
-    src="/favicon.ico"
-    alt="pixel heart"
-    className="w-14 h-14 mx-auto mb-4"
-    animate={{ scale: [1, 1.15, 1] }}
-    transition={{ duration: 1.5, repeat: Infinity }}
-  />
-</div>
+        
+        <motion.img
+  src="/favicon.ico"
+  alt="pixel heart"
+  className="w-14 h-14 mx-auto mb-4"
+  animate={{ scale: [1, 1.15, 1] }}
+  transition={{ duration: 1.5, repeat: Infinity }}
+/>
         
         <h1 className="
   text-[22px]
