@@ -120,7 +120,7 @@ const ValentineCard = () => {
       <div className="text-center pt-4">
         
         <motion.img
-  src={`${import.meta.env.BASE_URL}favicon-heart.ico`}
+  src="/favicon-heart.ico"
   alt="pixel heart"
   className="w-14 h-14 mx-auto mb-4"
   animate={{ scale: [1, 1.15, 1] }}
