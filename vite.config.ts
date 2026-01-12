@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/pixel-heart-quest/", // 🔴 REQUIRED for GitHub Pages
+base: mode === "production" ? "/pixel-heart-quest/" : "/",
 
   server: {
     host: "::",
