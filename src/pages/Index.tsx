@@ -62,7 +62,7 @@ const Index = () => {
           opacity-90
         "
       >
-        ~ always yours <span className="text-pink-500">gajodhar💕</span>
+        ~ alwayss yours <span className="text-pink-500">gajodhar💕</span>
       </footer>
     </div>
   );
